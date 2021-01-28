@@ -1,0 +1,299 @@
+C:\Users\micha\Desktop\!Nauka\Python\Udemy\SrednioZaawansowany\Zmienne_i_kod\testowy.txt
+
+
+AZ900 – MS Azure Fundamentals
+
+Chyba examin i certyfikat 35$ 225+Vat promocyjna cena
+Exam online, na stronie organizującej szkolenie Aseco, z mentorem na examin, łączymy się w wyznaczonej godzinie weryfikuje środowisko
+Agenda:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Elementy (charakterystyka) chmury
+1. wirtualizacja
+2. automatyzacja
+3. rozliczalność / analityka
+
+
+Chmura publiczna
+Hoster który oferuje usługi u siebie na własnym (firmy) sprzęcie
+Świdczy usługi wielu organizacjom
+Dostępna przez sieć
+
+Chmura prywatna
+My lub jakas spółka zależna buduje datacenter
+Serwisy wewnątrz firmy
+
+
+Chmura hybrydowa
+Połączenie obu chmur
+
+
+Benefity:
+
+Wysoka dostępność
+Skalowalność
+Globalna dostępnośc usług
+Zwinna – serwisowość, updaty etc, a w chmurze dostawca dba by było wszystko aktualne, nowe wersje etc.
+Disaster recovery – znów dba o to dostawca
+Tolerancja na błędy
+Elastycznośc można rozszerzać usługi
+Szacunki kosztów (są podawane za 24h, a można wyłączać)
+bezpieczeństwo
+ 
+CapEx vs. OpEx
+
+Koszty kapitałowe (CapEx) trzeba dużo zainwestować, potem maleją koszty z czasem
+Koszty operacyjne (OpEx) płacimy za to co wykorzystujemy, koszty są bardziej „stałe”
+
+
+Jak są piki to nie ma strachu że cośpadnie
+
+ 
+Usługi oferowane
+
+IaaS infrastruktura jako serwis – czyli np. VM w chmurze – najprostszy sposób przeniesienia, migracji do chmury
+
+
+
+
+
+
+PaaS – platform as a service
+Dostajemy środowisko do uruchomienia VM, ale nie zarzadzami maszyna – aplikacja po naszej stronie, aktyalizacja, dostęp do niej etc. – najstarszy model chmurowy
+
+SaaS – software as a service, np. Office 365
+Można tu tylko określić lokalizację np. EU, nic nas nie interesuje poza funkcjonalnością aplikacji
+
+
+Za co kto jest odpowiedzialny
+
+On-Premise nawet więcej bo budynki, internet, bezpieczeństwo fizyczne
+ 
+
+To się w PaaS wkomponowywuje
+Azure Functions – kodem wsio ogarniamy
+Azure Logic Aps – to jest codeless, klocki operacyjne, logiczne które będą działać na danych
+
+
+ 
+Moduł 2
+Podstawowe usługi
+
+
+60+ regionów, ponad 140 krajów
+
+Każdy region ma sparowany region
+
+
+Regiony są oddalone od siebie o co najmniej 300 mil dla bezpieczeństwa
+Połączone są max łączami
+Serwisy s replikowane do sparowanego regionu
+
+
+
+
+Każda lokalizacja składa się z 3 stref (przynajmniej) z niezależnymi źródłami
+
+
+Dowolna usługa w ramach Azura
+
+Grupy zasobów
+
+
+Model zarzadzanai wszystkimi zasobami
+Tu jesteśmy uwierzytelniani i autoryzowani
+
+
+
+
+6 grup, 10000 grup
+ 
+
+
+
+
+podstawowe usługi związane z cmputingiem
+
+
+
+Tworzenie VM
+
+
+
+Instalowanie IIS
+
+Maszynę trzeba nie tylo wyłączając VM ale również trzeba zwolnić zasoby aby nie płacić za computing, tylko za sam storage
+
+Tu nie będziemy zarządzać VMką
+
+Trzeba zacząć od App service plan – a to jest VM ale bez dostępu do niej
+
+
+
+
+
+
+
+
+
+
+Wyorzystywane przez inne serwisy
+Może być zrzadzane przez nas lub przez azura
+
+3 poziomy dostępu
+
+
+DaaS – Database as a Service
+Cosmos – nierelacyjna baza danych
+
+
+
+
+
+
+
+
+
+
+Dzień 2
+
+
+Azure Function mikroserwisy, 2 tryby rozliczalności, - ilość wywołań lub – jak webapps
+
+Narzędzia DevOpsowe
+
+
+
+
+Szybsze niż wyklikiwanie
+
+
+Jak skonfigurować srodiwisko aby ograniczyć koszty, zwiekszyc wydajność, bezpieczeństwo i jest darmowy
+
+
+Diagnostyka, platforma, nie tylko ażur, ale tez i on-premesis
+
+
+
+
+MODUŁ 4 - Security
+
+
+Sentinel – zarzadzanie zdarzeniami, incydentami
+
+
+2 opcje, basic (free) oraz Standard (płatna)
+Można podłączać on-premisowe marzyny
+
+
+
+
+Bezpieczne przechowywanie poufnych informacji (klucze, certyfikaty, piny), 2 wersje Standard (softwarowo - 1 poufna informacja kilka eu centów) i premium (hardwarowo - około 1$). Płatna również ilość odwołań
+
+
+
+
+
+ co 2 lata wszystkie serwery są wymieniane
+
+ Firewall – lista dostępowa (ACL), działa pasywnie - darmowe
+
+Tu jest to jako VMka, płatne
+
+
+Wbudowane w azura, nie da się wyłączyć, z automatu właczony (wersia basic), w standard (płatna) więcej narzędzi do analityki
+
+
+
+
+
+MODUŁ 5
+
+Azure AD Usługa do autoryzacji i autentykacji aplikacji webowych
+
+
+MFA – multi factor autentication, można prócz loginu I hasła inaczej się autoryzować:
+- o coś co wie
+- coś co posiada
+- i coś czym jestem (opcjonalnie), czyli biometryka
+Azure AD MFA jest tylko w premium
+
+czym nie jest: kontrolerem domeny
+
+
+
+Jak dbac o dane aby były przetwarzane zgodnie z wewnętrznymi czy zewnętrznymi regulacjami
+
+
+
+Umożliwia blokowanie na różnych poziomach
+
+
+
+Pozwala wymuszać standardy w Azurze wobec naszych zasobów
+
+
+
+
+
+
+
+Wszystkie Azury są połączone Global Azure Network, ale są wyjątki, np. US Gov, Chiny, Niemcy Gov
+
+ 
+MODUŁ 6
+
+
+6 elementów generuje koszty
+- typ zasobow, np. VM
+- od kogo kupujemy usługi i serwisy
+- lokalizacja infrastruktury (3 strefy, m.in. US/EU)
+- przepustowość/transfer pobierania (prócz backup services przy odtwarzaniu)
+- rezerwowane instancje, m.in. przedpłacanie
+- azure hybrit use benefit – jak mamy wykupione on-premsis licencje na Server i SQL’a to możemy je przenieść do azura i jest nieco taniej
+
+Planowanie kosztów/ale też szacowanie - https://azure.microsoft.com/pl-pl/pricing/calculator/
+
+To jest już ażurowe narzędzie ile zaoszczędzę z on-premises do azura
+
+https://www.microsoftazuresponsorships.com/Balance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
