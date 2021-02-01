@@ -85,6 +85,7 @@ for d in sorted(dict_denominations.keys()):
 
 for k in sorted(dict_denominations.keys()):
     print("Denominate: {0:6.2f} - amount {1:5}".format(k, dict_denominations[k]))
+    
 
 
 
