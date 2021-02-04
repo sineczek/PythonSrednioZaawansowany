@@ -1,5 +1,5 @@
 #pozwala pobrać napis - fragment kodu - np. pobrać kod z bazy danych i np. wygenerować raport
-
+#tylko wyrażenia, czyli coś co moze być przypisane później do zmiennej
 var_x = 10
 password = 'P@ssw0rd'
 
@@ -8,8 +8,8 @@ source = 'password' #ktoś może podać tu namiar na zmienną i wyświetli się 
 
 globals = globals().copy() #kopia zmiennych środowiskowych
 
-resoult = eval(source, globals)
-print(resoult)
+result = eval(source, globals)
+print(result)
 
 #print(globals()) #zdefiniowane zmienne
 
@@ -17,8 +17,8 @@ print(resoult)
 globals = globals().copy() #kopia zmiennych środowiskowych
 del globals['password'] #wykasowanie zmiennej password i przez to teraz kończy się błedem
 #gdyż nie ma już dostępu do tej zmiennej password
-resoult = eval(source, globals)
-print(resoult)
+result = eval(source, globals)
+print(result)
 print('-'*20)
 
 
