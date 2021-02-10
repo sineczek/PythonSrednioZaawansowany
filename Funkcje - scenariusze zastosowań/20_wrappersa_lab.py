@@ -92,7 +92,7 @@ def get_sequence(n):
 
 print(get_sequence(25))
 
-'''#z rozwiązania zapętla się
+'''#z rozwiązania również zapętla się
 
 import time
 import functools
@@ -123,6 +123,7 @@ def get_sequence(n):
 
 print(get_sequence(25))
 
+#jak i wersja bez wrappera.
 import time
 
 def wrapper_time(a_function):
