@@ -1,0 +1,24 @@
+--------------------
+Function "ChangeSalary" started at 2021-02-11T18:23:34.572899
+Following arguments ware used:
+Johnson 20000 True
+
+function returned 20000
+--------------------
+Function "ChangeSalary" started at 2021-02-11T18:23:34.573904
+Following arguments ware used:
+Johnson 20000
+is_bonus=True
+function returned 20000
+--------------------
+Function "ChangeSalary" started at 2021-02-11T18:23:52.404253
+Following arguments ware used:
+Johnson 20000 True
+
+function returned 20000
+--------------------
+Function "ChangeSalary" started at 2021-02-11T18:23:52.405253
+Following arguments ware used:
+Johnson 20000
+is_bonus=True
+function returned 20000

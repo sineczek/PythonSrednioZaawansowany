@@ -1,0 +1,2 @@
+Action FILE_CREATE executed on C:\Users\micha\Desktop\!Nauka\Python\Udemy\SrednioZaawansowany\Funkcje - scenariusze zastosowañ\lab_files\dummy_file.txt on 2021-02-11 18:41:32
+Action FILE_CREATE executed on C:\Users\micha\Desktop\!Nauka\Python\Udemy\SrednioZaawansowany\Funkcje - scenariusze zastosowañ\lab_files\dummy_file.txt on 2021-02-11 18:41:32
