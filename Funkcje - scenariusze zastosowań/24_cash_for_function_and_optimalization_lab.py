@@ -53,7 +53,7 @@ start = time.time()
 
 for i in range(100):
     result = fib(i)
-    print('{} w ciągu Finobacciego wynik jest {}'.format(i, fib(i)))
+    print('{} w ciągu Finobacciego wynik jest {} w czasie {}'.format(i, fib(i), time.time() - start))
     print('{0:2d}  {2:3.2f}'.format(i, result, time.time() - start))
 
 stop = time.time()
