@@ -1,0 +1,39 @@
+--------------------------------------------------------------------------------------------------
+
+https://pl.wikibooks.org/wiki/Zanurkuj_w_Pythonie/Praca_z_katalogami
+
+Jest jeszcze inna metoda dostania się do zawartości katalogu. Metoda ta jest bardzo potężna i używa zestawu symboli
+wieloznacznych (ang. wildcard), z którymi można się spotkać pracując w linii poleceń.
+
+Przykład. Listowanie zawartości katalogu przy pomocy glob
+
+#>>> os.listdir("c:\\music\\_singles\\")               #(1)
+['a_time_long_forgotten_con.mp3', 'hellraiser.mp3',
+'kairo.mp3', 'long_way_home1.mp3', 'sidewinder.mp3',
+'spinning.mp3']
+#>>> import glob
+#>>> glob.glob('c:\\music\\_singles\\*.mp3')           #(2)
+['c:\\music\\_singles\\a_time_long_forgotten_con.mp3',
+'c:\\music\\_singles\\hellraiser.mp3',
+'c:\\music\\_singles\\kairo.mp3',
+'c:\\music\\_singles\\long_way_home1.mp3',
+'c:\\music\\_singles\\sidewinder.mp3',
+'c:\\music\\_singles\\spinning.mp3']
+#>>> glob.glob('c:\\music\\_singles\\s*.mp3')          #(3)
+['c:\\music\\_singles\\sidewinder.mp3',
+'c:\\music\\_singles\\spinning.mp3']
+#>>> glob.glob('c:\\music\\*\\*.mp3')                  #(4)
+Jak wcześniej powiedzieliśmy, os.listdir pobiera ścieżkę do katalogu i zwraca wszystkie pliki i podkatalogi, które się
+w nim znajdują.
+
+Z drugiej strony, moduł glob na podstawie podanego wyrażenia składającego się z symboli wieloznacznych, zwraca pełne
+ścieżki wszystkich plików, które spełniają te wyrażenie. Tutaj wyrażenie jest ścieżką do katalogu plus "*.mp3",
+który będzie dopasowywał wszystkie pliki .mp3. Dodajmy, że każdy element zwracanej listy jest już pełną ścieżką do pliku.
+
+Jeśli chcemy znaleźć wszystkie pliki w określonym katalogu, gdzie nazwa zaczyna się od "s", a kończy na ".mp3", możemy
+to zrobić w ten sposób.
+
+Teraz rozważ taki scenariusz: mamy katalog z muzyką z kilkoma podkatalogami, wewnątrz których są pliki .mp3. Możemy
+pobrać listę wszystkich tych plików za pomocą jednego wywołania glob, wykorzystując połączenie dwóch wyrażeń. Pierwszym
+jest "*.mp3" (wyszukuje pliki .mp3), a drugim są same w sobie ścieżki do katalogów, aby przetworzyć każdy podkatalog w
+c:\music. Ta prosto wyglądająca funkcja daje nam niesamowite możliwości!

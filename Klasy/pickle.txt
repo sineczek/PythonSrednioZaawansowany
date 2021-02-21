@@ -1,0 +1,41 @@
+-----------------------------------------------------------------------------------
+
+Krótka dokumentacja modułu pickle ze strony:
+
+https://pl.python.org/docs/tut/node9.html
+
+7.2.2 Moduł pickle
+
+Napisy mogą być w łatwy sposób zapisywane i czytane z pliku. Liczby wymagają trochę więcej zachodu, bowiem metoda read()
+ zwraca tylko napis, który musi być poddany działaniu takiej funkcji,, jak string.atoi(), która pobiera napis w rodzaju
+ '123' i zwraca wartość liczbową 123. W przypadku jednak, gdy chce się przechowywać w pliku bardziej złożone typy danych
+ jak listy, słowniki lub instancje klas, sprawy się nieco komplikują.
+
+Python dostarcza standardowy moduł pickle, który zaoszczędza użytkownikom pisania i śledzenia kodu służącego do
+zachowywania skomplikowanych typów danych. Ten zadziwiający moduł potrafi wziąć na wejściu prawie każdy obiekt
+Pythona (nawet pewne formy kodu!) i przekształcić go w napis. Proces ten zwie się marynowaniem. Rekonstruowanie
+obiektu z formy napisowej zwie się odmarynowaniem. Pomiędzy marynowaniem a odmarynowaniem, napis reprezentujący
+obiekt może zostać zapisany w pliku lub w innej danej, lub przesłany połączeniem sieciowym do jakiegoś oddalonego
+komputera.
+
+Jeżeli istnieje obiekt x i obiekt pliku f, który został otwarty do pisania, to najprostszy sposób zamarynowania
+obiektu zajmuje jeden wiersz kodu:
+
+
+
+pickle.dump(x, f)
+Zakładając, że f jest obiektem pliku, który został otwarty do czytania, odmarynowanie przebiega następująco:
+
+
+
+x = pickle.load(f)
+(Istnieją warianty tego mechanizmu użyteczne w przypadku marynowania wielu obiektów, lub gdy nie chce się zapisać
+danych marynaty w pliku -- skonsultuj się z pełną dokumentacją dla modułu pickle, którą znajdziesz w «Opisie biblioteki»).
+
+pickle jest standardowym sposobem na uczynienie obiektów Pythona trwałymi i ponownie użytymi przez inne programy
+lub przyszłe wywołania tego samego programu: technicznym określeniem tego mechanizmu jest trwałośćobiektu. Z powodu
+powszechnego użycia modułu pickle, wielu autorów piszących rozszerzenia do Pythona, dba o to, aby nowe typy danych,
+takie jak macierze, mogły być poprawnie zamarynowane i odmarynowane.
+
+
+
